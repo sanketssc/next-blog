@@ -50,6 +50,8 @@ const Create = () => {
           View Posts
         </Link>
       </div>
+      
+
       {success && (
         <div className="absolute w-full">
           <div className="mt-5 bg-green-500 text-white mx-auto w-60 text-center p-3">
@@ -67,21 +69,24 @@ const Create = () => {
         <h1 className="text-4xl text-center font-bold -mt-60">Create Post</h1>
         <form type="submit" onSubmit={Submit} className="flex flex-col gap-3">
           <input
-            className="w-3/4  mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500 focus:border"
+            required="required"
+            className="w-3/4 invalid:border-2 required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2  mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500 focus:border"
             type="text"
             placeholder="Title"
             value={title}
             onChange={(event) => setTitle(event.target.value)}
           />
           <input
-            className="w-3/4  mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
+            required="required"
+            className="w-3/4 invalid:border-2 required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2 mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
             type="text"
             placeholder="Author"
             value={author}
             onChange={(event) => setAuthor(event.target.value)}
           />
           <textarea
-            className="w-3/4  mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
+            required="required"
+            className="w-3/4 invalid:border-2  required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2 mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
             type="text"
             placeholder="Content"
             value={content}
@@ -89,10 +94,11 @@ const Create = () => {
             rows="4"
             cols="50"
           />
-          <button className="w-4/12  mx-auto p-3 text-xl border-gray-600 border hover:border-blue-500 rounded-md">
+          <button className="w-4/12 mx-auto p-3 text-xl border-gray-500 border hover:border-blue-800 rounded-md bg-gradient-to-r from-blue-800 to-cyan-500 hover:via-blue-500 hover:to-cyan-500">
             Submit
           </button>
         </form>
+        
       </div>
     </>
   );
