@@ -70,7 +70,7 @@ const Create = () => {
         <form type="submit" onSubmit={Submit} className="flex flex-col gap-3">
           <input
             required="required"
-            className="w-3/4 invalid:border-2 required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2  mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500 focus:border"
+            className="w-3/4 invalid:border-2 required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2  mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
             type="text"
             placeholder="Title"
             value={title}
@@ -86,13 +86,14 @@ const Create = () => {
           />
           <textarea
             required="required"
-            className="w-3/4 invalid:border-2  required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2 mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
+            className="w-3/4 invalid:border-2 resize-none required:border-dashed valid:border-solid invalid:border-red-500 valid:border-green-500 valid:border-2 mx-auto p-3 text-xl border-gray-200 border focus:outline-none rounded-md focus:border-blue-500"
             type="text"
             placeholder="Content"
             value={content}
             onChange={(event) => setContent(event.target.value)}
             rows="4"
             cols="50"
+            
           />
           <button className="w-4/12 mx-auto p-3 text-xl border-gray-500 border hover:border-blue-800 rounded-md bg-gradient-to-r from-blue-800 to-cyan-500 hover:via-blue-500 hover:to-cyan-500">
             Submit

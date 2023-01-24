@@ -40,15 +40,16 @@ const Posts = ({ posts }) => {
         {posts &&
           posts.map((post, index) => (
             <div
-              className="max-w-screen-md w-full p-2 cursor-pointer"
+              className="max-w-screen-md w-full p-2 cursor-pointer hover:shadow-blue-600 hover:shadow-sm duration-300"
               onClick={() => handleClick(post._id)}
               key={index}
             >
               <h1 className="text-2xl font-bold">{post.title}</h1>
               <p className="text-sm">{post.author}</p>
-              <p className="mt-2 text-base text-ellipsis">
-                {post.content.substr(0, 140)}
-                {post.content.length > 140? "...":"" }
+              <p className="mt-2 text-base mr-10 whitespace-nowrap overflow-hidden">
+                {post.content
+                /* {post.content.substr(0, 140)}
+                {post.content.length > 140? "...":"" } */}
               
               </p>
             </div>
