@@ -46,7 +46,7 @@ const Posts = ({ posts }) => {
             >
               <h1 className="text-2xl font-bold">{post.title}</h1>
               <p className="text-sm">{post.author}</p>
-              <p className="mt-2 text-base mr-10 whitespace-nowrap overflow-hidden">
+              <p className="mt-2 text-base mr-4 whitespace-nowrap overflow-hidden overflow-ellipsis">
                 {post.content
                 /* {post.content.substr(0, 140)}
                 {post.content.length > 140? "...":"" } */}

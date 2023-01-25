@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 export async function getServerSideProps(context) {
   const { id } = context.params;
-  console.log(id);
+  // console.log(id);
   const res = await axios.get(`http://localhost:8000/posts/${id}`);
   const post = await res.data;
   // console.log(post);
